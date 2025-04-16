@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coursera Mockup - Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    header {
+      background-color: #2a73cc;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #2a73cc;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .container {
+      padding: 30px;
+      text-align: center;
+    }
+    .main-image {
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    iframe {
+      width: 90%;
+      height: 500px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+    .section {
+      margin-top: 40px;
+    }
+    .section h3 {
+      color: #2a73cc;
+    }
+    .benefits {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .benefit {
+      width: 250px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+    .partners img {
+      height: 40px;
+      margin: 10px;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #2a73cc;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 30px;
+    }
+    footer {
+      background-color: #2a73cc;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo 2.png" alt="Coursera Logo" height="300">
+    <h1>Learn Without Limits</h1>
+    <p>Explore top courses from world-class universities and companies.</p>
+  </header>
+
+  <nav>
+    <a onclick="loadPage('home')">Home</a>
+    <a onclick="loadPage('courses.html')">Courses</a>
+    <a onclick="loadPage('about.html')">About</a>
+    <a onclick="loadPage('contact.html')">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div id="content">
+      <h2>Welcome to Coursera</h2>
+      <p>Coursera brings the world’s best learning experience to your fingertips. Whether you're looking to build job-ready skills or explore something new, Coursera offers the freedom to learn at your pace — anytime, anywhere.</p>
+      <img class="main-image" src="../images/web222.png" alt="Online Learning">
+
+      <div class="section">
+        <h3>Why Choose Coursera?</h3>
+        <div class="benefits">
+          <div class="benefit">
+            <h4>Flexible Schedule</h4>
+            <p>Learn whenever and wherever it works best for you.</p>
+          </div>
+          <div class="benefit">
+            <h4>Top Instructors</h4>
+            <p>Courses from leading universities and industry experts.</p>
+          </div>
+          <div class="benefit">
+            <h4>Certificates</h4>
+<p>Earn shareable certificates to boost your career.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Trusted by Partners Worldwide</h3>
+        <div class="partners">
+          <img src="../images/google.png" alt="Google">
+          <img src="../images/stanford.png" alt="Stanford University">
+          <img src="../images/ibm.png" alt="IBM">
+          <img src="../images/illinois.png" alt="Illinois">
+        </div>
+      </div>
+
+      <a href="#" class="cta-button">Start Learning Today</a>
+    </div>
+
+    <iframe id="iframeContent" src="" width="100%" height="500px" style="display: none; border: none;"></iframe>
+  </div>
+
+  <footer>
+    &copy; 2025 Coursera Mockup | Home Page
+  </footer>
+
+  <script>
+    function loadPage(page) {
+      const content = document.getElementById("content");
+      const iframe = document.getElementById("iframeContent");
+      if (page === 'home') {
+        content.style.display = 'block';
+        iframe.style.display = 'none';
+        iframe.src = "";
+      } else {
+        content.style.display = 'none';
+        iframe.style.display = 'block';
+        iframe.src = page;
+      }
+    }
+  </script>
+
+</body>
+</html>
+<a href="../courses.html" class="btn btn-primary mt-3">Course</a>
+<script src="../js/bootstrap-4.4.1.js"></script> 
